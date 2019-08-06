@@ -4,20 +4,18 @@ import styled from 'styled-components';
 import SurveyComponent from '../survey';
 
 const ListSection = styled.section`
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.color.secondary.lighter};
 `;
 
-const Header = styled.header`
-  font-size: ${props => props.theme.size.lg}px;
-`;
+const Header = styled.header(props => props.theme.styles.header);
 
 const List = styled.ul`
-  listStyle: none;
-  margin: ${props => props.theme.spacing.sm}px;
+  list-style: none;
+  margin: ${props => props.theme.spacing.sm};
 `;
 
 const ListItem = styled.li`  
-  padding: ${props => props.theme.spacing.sm}px;  
+  padding: ${props => props.theme.spacing.sm};  
 `;
 
 export default withTranslation()(
