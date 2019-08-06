@@ -1,0 +1,31 @@
+{
+  "surveys": [
+    {
+      "id": "as8a7as7s787saa8sa8s7",
+      "title": "Survey 1",
+      "description": "",
+      "active": true,
+      "questions": [
+        {
+          "id": "as8a7as7s78fdfd3238s7",
+          "title": "Question 1",
+          "descritpion": "Question description",
+          "name": "MCQ",
+          "exclusive": true,
+          "answers": [
+            {
+              "id": "as8a7as7s787saawerr8s7",
+              "title": "Answer 1",
+              "correctAnswer": false
+            },
+            {
+              "id": "as8a7as7s787saawerr8s7",
+              "title": "Answer 1",
+              "correctAnswer": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
