@@ -1,44 +1,44 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { withTranslation } from 'react-i18next';
-import styled from 'styled-components';
-import SurveyComponent from '../survey';
 
-const ListSection = styled.section`
-  background-color: ${props => props.theme.color.secondary.lighter};
-`;
+import { ListSection, List, ListItem, NoData } from './survey-list.style';
 
-const Header = styled.header(props => props.theme.styles.header);
-
-const List = styled.ul`
-  list-style: none;
-  margin: ${props => props.theme.spacing.sm};
-`;
-
-const ListItem = styled.li`  
-  padding: ${props => props.theme.spacing.sm};  
-`;
 
 export default withTranslation()(
   class SurveyListComponent extends Component {
     constructor(props) {
       super(props);
-      this.t = props.t;
+      this.t = props.t;      
     }
-    
+
+    handleChange = (e) => {
+      const selectedId = e.currentTarget.dataset.id;      
+      
+      if (this.props.items && this.props.items.length) {
+        const selectedItem = this.props.items.find(item => item.id === selectedId);        
+        typeof this.props.onChange === 'function' && this.props.onChange(selectedItem);
+      }      
+    }
+
     render() {
-      return(
+      return (
         <ListSection>
-          <Header>{this.t('components.surveyListComponent.title')}</Header>
+          {/* <Header>{this.t('components.surveyListComponent.title')}</Header> */}
           <List>
-            <ListItem>
-              {
-                this.props.items.map((item) => {
-                  return (<SurveyComponent item={item} key={item.id}></SurveyComponent>);
-                })
-              }
-            </ListItem>
-          </List>
-        </ListSection>    
+            { this.props.items && this.props.items.length && this.props.items.map((item) => {
+                return (
+                  <ListItem onClick={this.handleChange} key={item.id} data-id={item.id} selected={ this.props.selected && item.id === this.props.selected.id}>
+                    <span>{item.title}</span>
+                  </ListItem>
+                );
+              })
+            }
+            {
+              (!this.props.items || !this.props.items.length) &&
+              <NoData>{this.t('components.surveyListComponent.nodata')}</NoData>
+            }
+          </List>          
+        </ListSection>
       );
     }
   }

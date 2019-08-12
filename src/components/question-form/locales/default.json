@@ -1,5 +1,23 @@
 {
   "en": {
-    "title": "Question Form"
+    "title": "Question Form",
+    "question": {
+      "label": "Question",
+      "placeholder": "Question Title...",
+      "exclusive": "has exclusive answer"
+    },
+    "answer": {
+      "label": "",
+      "placeholder": "Answer..."
+    },
+    "answers": "Answers",
+    "saveFormLabel": "SAVE QUESTION",
+    "cancelFormLabel": "CANCEL",
+    "errors": {
+      "title": "Question Title should not be empty.",
+      "answer": "should not be empty.",
+      "minAnswers": "Minimum of two answers are required for a Question.",
+      "maxAnswers": "Answers for a Question should not exceed 5"
+    }
   }
 }

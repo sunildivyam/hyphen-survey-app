@@ -52,16 +52,108 @@ styles = {
     labels: {
         fontFamily: typography.fontFamily.lato,
         fontSize: typography.size.md,
-        fontWeight: 'normal',
-        color: color.primary.dark,
+        fontWeight: 'bold',
+        color: color.primary.normal,
         padding: spacing.sm
     },
     text: {
         fontFamily: typography.fontFamily.lato,
         fontSize: typography.size.sm,
         fontWeight: 'normal',
-        color: color.secondary.dark,
+        color: color.primary.dark,
         padding: spacing.sm
+    },
+    radioButton: {
+        normal: {            
+            width: '15px',
+            height: '15px',
+            borderRadius: '15px',
+            top: '-2px',
+            left: '-6px',
+            position: 'relative',
+            backgroundColor: color.secondary.lighter,
+            content: '""',
+            display: 'inline-block',
+            visibility: 'visible',
+            border: '2px solid ' + color.primary.light,
+            cursor: 'pointer'
+        },    
+        checked: {
+            width: '15px',
+            height: '15px',
+            borderRadius: '15px',
+            top: '-2px',
+            left: '-6px',
+            position: 'relative',
+            backgroundColor: color.primary.light,
+            content: '""',
+            display: 'inline-block',
+            visibility: 'visible',
+            border: '2px solid ' + color.primary.light,
+            cursor: 'pointer'
+        }
+    },
+    checkbox: {
+        normal: {            
+            width: '15px',
+            height: '15px',
+            borderRadius: '4px',
+            top: '-2px',
+            left: '-6px',
+            position: 'relative',
+            backgroundColor: color.secondary.lighter,
+            content: '""',
+            display: 'inline-block',
+            visibility: 'visible',
+            border: '2px solid ' + color.primary.light,
+            cursor: 'pointer'
+        },    
+        checked: {
+            width: '15px',
+            height: '15px',
+            borderRadius: '4px',
+            top: '-2px',
+            left: '-6px',
+            position: 'relative',
+            backgroundColor: color.primary.light,
+            content: '""',
+            display: 'inline-block',
+            visibility: 'visible',
+            border: '2px solid ' + color.primary.light,
+            cursor: 'pointer'
+        }
+        
+    },
+    button: {
+        normal: {
+            padding: spacing.sm + 'px ' + spacing.lg + 'px',
+            backgroundColor: color.primary.normal,
+            color: color.white,
+            border: '1px solid ' + color.secondary.light,
+            fontFamily: typography.fontFamily.lato,
+            fontSize: typography.size.sm,
+            fontWeight: 'bold',
+            lineHeight: typography.size.md,
+            cursor: 'pointer'
+        },
+        hover: {
+            backgroundColor: color.primary.light
+        },
+        disabled: {
+            backgroundColor: color.secondary.lighter,
+            color: color.secondary.normal,
+            cursor: 'default'
+        },
+        barebone: {
+            backgroundColor: 'transparent',
+            borderColor: 'transparent',
+            color: color.primary.normal,
+            padding: size.none,
+            lineHeight: '30px',
+            height: '30px',
+            width: '30px',
+            fontSize: '30px'
+        }
     }
 };
 

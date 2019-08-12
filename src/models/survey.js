@@ -1,4 +1,4 @@
-import Utils from '../utils/utils';
+import Utils from '../utils';
 
 export default class Survey {
   constructor(id, title, description, active, questions, authorId) {     
