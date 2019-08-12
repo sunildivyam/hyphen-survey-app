@@ -1,5 +1,6 @@
 # hyphen-survey-app
 HYPHEN Survey App
+The App lists down the available surveys and allows the user to add/edit custom questions of a survey.
 
 ## Setup
     > goto root folder
@@ -16,4 +17,9 @@ HYPHEN Survey App
     * Given Color Pallete, implemented.
     * State management using 'react-redux' & redux.
     * UI Components created using 'Storybook'
+    * Form validations are implemented.
+    * Created dataService, that is responsible for fetching/updating and saving data.
+## Future TODOs:
+    * Create a Loader Service and Show Loading message or a Loader for asynchronous tasks.
+    * Create Error Service, and Show Error Messages for failed ajax calls.
 
