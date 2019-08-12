@@ -1,6 +1,5 @@
 # hyphen-survey-app
-HYPHEN Survey App
-The App lists down the available surveys and allows the user to add/edit custom questions of a survey.
+The HYPHEN Survey App lists down the available surveys and allows the user to add/edit custom questions of a survey.
 
 ## Setup
     > goto root folder
