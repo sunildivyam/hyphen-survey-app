@@ -40,13 +40,16 @@ export const Answer = styled.span`
 `;
 export const List = styled.ul`
   list-style: none;
-  margin: ${props => props.theme.spacing.sm};
+  margin: ${props => props.theme.spacing.sm}px;
 `;
 
 export const ListItem = styled.li`  
   padding: ${props => props.theme.spacing.sm}px;
 `;
 export const EditButton = styled.button`
+    &:focus {
+      outline: none;
+    }
     ${props => props.theme.styles.button.normal}    
     ${props => props.theme.styles.button.barebone}
     color: ${props => props.theme.color.success}

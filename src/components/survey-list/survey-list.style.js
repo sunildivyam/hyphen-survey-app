@@ -10,23 +10,25 @@ export const Header = styled.header(props => props.theme.styles.header);
 
 export const List = styled.ul`
   list-style: none;
-  margin: ${props => props.theme.spacing.sm};
+  margin: ${props => props.theme.spacing.sm}px;
   padding-left: ${props => props.theme.spacing.none}px;  
 `;
 
 export const ListItem = styled.li` 
   ${props => props.theme.styles.text} 
-  padding: ${props => props.theme.spacing.sm};  
+  padding: ${props => props.theme.spacing.sm}px;  
   cursor: pointer;
   background-color: ${props => props.selected ? props.theme.color.primary.light: 'inherit'};
-  
+  font-size: ${props => props.theme.typography.size.md};
+  color: ${props => props.selected ? props.theme.color.white: 'inherit'};
+
   &:before {
     content: '';
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
-    border: 2px solid ${props => props.theme.color.primary.light};
+    border: 2px solid ${props => props.selected ? props.theme.color.primary.normal: props.theme.color.primary.light};
     margin-right: 7px;    
   }
   &:hover {

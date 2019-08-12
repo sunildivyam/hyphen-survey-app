@@ -6,9 +6,8 @@ export const LayoutContainer = styled.section`
     border: 1px solid ${props => props.theme.color.secondary.light};
     padding: 0px;
     margin: 0px auto;
-    max-width: 1200px;
     width: 100%;
-    align-items: start;
+    align-items: center;
     justify-content: start;
     box-sizing: border-box;
     * {
@@ -27,7 +26,7 @@ export const TopSection = styled.section`
     border-right: 1px solid ${props => props.theme.color.secondary.light};
     align-items: center;
     justify-content: center;
-    font-size: ${props => props.theme.typography.size.md};
+    font-size: ${props => props.theme.typography.size.sm};
 `;
 
 export const BottomSection = styled.section`
@@ -35,7 +34,8 @@ export const BottomSection = styled.section`
     flex-direction: row;    
     padding: ${props => props.theme.spacing.sm}px;
     margin: 0px;
-    min-width: 200px;
+    min-width: 200px;    
+    max-width: 1200px;
     width: 100%;
     border-right: 1px solid ${props => props.theme.color.secondary.light};
     align-items: start;

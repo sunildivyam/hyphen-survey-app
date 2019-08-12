@@ -14,4 +14,11 @@ storiesOf('Answer', module)
         <AnswerComponent item={new Answer()}/>
       </I18nextProvider>
     </ThemeProvider>
+  ))
+  .add('Pre Filled Answer', () => (
+    <ThemeProvider theme={defaultTheme}>
+      <I18nextProvider i18n={i18n}>
+        <AnswerComponent item={new Answer('wqrqwwqqr323sds', 'Extremely well', true)}/>
+      </I18nextProvider>
+    </ThemeProvider>
   ));

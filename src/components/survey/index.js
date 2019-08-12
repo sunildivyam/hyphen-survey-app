@@ -15,8 +15,7 @@ export default withTranslation()(class SurveyComponent extends Component {
       <ListSection>
         <Header>{((this.props.item && this.props.item.title) || this.t('components.surveyComponent.title'))}</Header>
         <List>
-          {this.props.item && this.props.item.questions && this.props.item.questions.length &&
-          <>
+          {this.props.item && this.props.item.questions && this.props.item.questions.length > 0 &&          
           <ListItem>
             {
               this.props.item.questions.map((item, index) => {
@@ -28,15 +27,14 @@ export default withTranslation()(class SurveyComponent extends Component {
               })
             }
           </ListItem>
-          <ListItem right>
-            <AddButton onClick={this.props.onAddQuestion}>&#43;</AddButton>
-          </ListItem>
-          </>
           }
           {
             (!this.props.item || !this.props.item.questions || !this.props.item.questions.length) &&
             <NoData>{this.t('components.surveyComponent.nodata')}</NoData>
           }
+          <ListItem right>
+            <AddButton onClick={this.props.onAddQuestion}>&#43;</AddButton>
+          </ListItem>          
         </List>
       </ListSection>
     );

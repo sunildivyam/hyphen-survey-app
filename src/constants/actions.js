@@ -34,8 +34,8 @@ export const saveQuestion = (question) => {
 }
 
 export const toggleLoading = isLoading => {
-    return {
+    return dispatch => dispatch ({
         type: isLoading ? ActionTypes.LOADING_STARTED : ActionTypes.LOADING_STOPPED,
         isLoading: isLoading
-    }
+    })
 }

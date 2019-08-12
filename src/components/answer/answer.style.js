@@ -10,6 +10,9 @@ export const Field = styled.input`
 
 
 export const RemoveButton = styled.button`
+    &:focus {
+        outline: none;
+    }
     ${props => props.theme.styles.button.normal}    
     ${props => props.theme.styles.button.barebone}
     color: ${props => props.theme.color.danger}
@@ -22,6 +25,9 @@ export const RemoveButton = styled.button`
 `;
 
 export const EditButton = styled.button`
+    &:focus {
+        outline: none;
+    }
     ${props => props.theme.styles.button.normal}    
     ${props => props.theme.styles.button.barebone}
     color: ${props => props.theme.color.success}
@@ -47,4 +53,5 @@ export const AnswerSection = styled.section`
     position: relative;
     margin: 0px;
     padding: 0px;
+    border-bottom: 1px solid ${props => props.theme.color.secondary.light};
 `;

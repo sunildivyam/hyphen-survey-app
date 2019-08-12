@@ -30,6 +30,9 @@ export const Label = styled.label`
     padding-left: 0px;    
 `;
 export const Button = styled.button`
+    &:focus {
+        outline: none;
+    }
     ${props => props.theme.styles.button.normal}
     &:hover {
         ${props => props.theme.styles.button.hover}
@@ -40,6 +43,9 @@ export const Button = styled.button`
 `;
 
 export const AddButton = styled.button`
+    &:focus {
+        outline: none;
+    }
     ${props => props.theme.styles.button.normal}    
     ${props => props.theme.styles.button.barebone}
     color: ${props => props.theme.color.success}
