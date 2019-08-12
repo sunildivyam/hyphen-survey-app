@@ -10,10 +10,10 @@ HYPHEN Survey App
     > npm run storybook
         runs the storybook on port 3005, where you can see all the UI components
 ## Features Implemented
-    > Internationalization using i18next
-    > Theme using 'styled-components'
-    > Global Styles using 'styled-components'
-    > Given Color Pallete, implemented.
-    > State management using 'react-redux' & redux.
-    > UI Components created using 'Storybook'
+    * Internationalization using i18next
+    * Theme using 'styled-components'
+    * Global Styles using 'styled-components'
+    * Given Color Pallete, implemented.
+    * State management using 'react-redux' & redux.
+    * UI Components created using 'Storybook'
 
