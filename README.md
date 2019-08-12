@@ -3,6 +3,7 @@ The HYPHEN Survey App lists down the available surveys and allows the user to ad
 
 ## Setup
     > goto root folder
+    > npm i
     > npm run start
         runs the local dev server on port 3000
     > npm run json-server
