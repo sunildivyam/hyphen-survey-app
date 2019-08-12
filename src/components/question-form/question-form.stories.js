@@ -7,7 +7,7 @@ import { GlobalStyles } from '../../styles/global-styles';
 import i18n from '../../i18n';
 import QuestionFormComponent  from './index.js';
 import Question from '../../models/question';
-import Answer from '../../models/answer';
+
 
 
 storiesOf('Question Form', module)

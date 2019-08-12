@@ -21,7 +21,7 @@ export default withTranslation()(
         errors.push(this.t('components.questionFormComponent.errors.title'));
       }
       
-      question.answers.map((ans, i) => {
+      question.answers.forEach((ans, i) => {
         if (!ans.title.trim()) {
           errors.push(`Answer ${i+1} ${this.t('components.questionFormComponent.errors.answer')}`);
         }
